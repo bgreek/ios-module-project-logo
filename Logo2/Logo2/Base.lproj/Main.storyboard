@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tg2-09-Qzf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -8,34 +8,44 @@
     </dependencies>
     <scenes>
         <!--Logo View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="DzO-xm-fTN">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogoViewController" customModule="Logo2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Logo" customModule="Logo2" customModuleProvider="target">
+                <viewController id="tg2-09-Qzf" customClass="LogoViewController" customModule="Logo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MEE-Br-3jn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ons-T0-IzP" customClass="Logo" customModule="Logo2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGR-Md-6qt" customClass="Logo" customModule="Logo2" customModuleProvider="target">
+                                <rect key="frame" x="40" y="294" width="334" height="338"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th8-l1-eI2">
+                                <rect key="frame" x="190" y="682" width="34" height="30"/>
+                                <state key="normal" title="Fade"/>
+                                <connections>
+                                    <action selector="fadeButtonTaped:" destination="tg2-09-Qzf" eventType="touchUpInside" id="CLK-8d-QeK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ons-T0-IzP" secondAttribute="trailing" id="AEZ-AV-cXB"/>
-                            <constraint firstItem="Ons-T0-IzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dQP-WI-iZG"/>
-                            <constraint firstItem="Ons-T0-IzP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mUZ-pU-GMg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ons-T0-IzP" secondAttribute="bottom" id="pGY-hL-rWm"/>
+                            <constraint firstItem="Th8-l1-eI2" firstAttribute="centerX" secondItem="UVs-5n-xRx" secondAttribute="centerX" id="ANB-kH-NDu"/>
+                            <constraint firstItem="mGR-Md-6qt" firstAttribute="top" secondItem="UVs-5n-xRx" secondAttribute="top" constant="250" id="CSb-hG-vci"/>
+                            <constraint firstItem="UVs-5n-xRx" firstAttribute="bottom" secondItem="Th8-l1-eI2" secondAttribute="bottom" constant="150" id="Jr0-rR-43V"/>
+                            <constraint firstItem="UVs-5n-xRx" firstAttribute="bottom" secondItem="mGR-Md-6qt" secondAttribute="bottom" constant="230" id="XH0-9Q-bzZ"/>
+                            <constraint firstItem="mGR-Md-6qt" firstAttribute="leading" secondItem="UVs-5n-xRx" secondAttribute="leading" constant="40" id="okb-X9-Ahb"/>
+                            <constraint firstItem="UVs-5n-xRx" firstAttribute="trailing" secondItem="mGR-Md-6qt" secondAttribute="trailing" constant="40" id="pYy-gh-aSy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="UVs-5n-xRx"/>
                     </view>
                     <connections>
-                        <outlet property="logoView" destination="Ons-T0-IzP" id="sfy-Wk-urK"/>
+                        <outlet property="fadeButton" destination="Th8-l1-eI2" id="W7S-2e-XMH"/>
+                        <outlet property="logoView" destination="mGR-Md-6qt" id="z2V-8K-gLy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5L-UI-ffT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="-213" y="161"/>
         </scene>
     </scenes>
 </document>

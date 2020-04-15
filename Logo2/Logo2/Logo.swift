@@ -12,74 +12,44 @@ class Logo: UIView {
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
             
-            // Outside line accross
-            context.move(to: CGPoint(x: 50, y: 100))
-            context.addLine(to: CGPoint(x: 50, y: 100))
-            context.addLine(to: CGPoint(x: 350, y: 100))
+            let startFirstLine = CGPoint(x: rect.size.width * 0.15, y: rect.size.height * 0.15)
+            let firstLineEnd = CGPoint(x: rect.size.width * 0.85, y: rect.size.height * 0.15)
+            let secondLineEnd = CGPoint(x: rect.size.width * 0.85, y: rect.size.height * 0.65)
+            let thirdLineEnd = CGPoint(x: rect.size.width * 0.5, y: rect.size.height * 0.9)
+            let fourthLineEnd = CGPoint(x: rect.size.width * 0.15, y: rect.size.height * 0.65)
+            let fifthLineEnd = CGPoint(x: rect.size.width * 0.15, y: rect.size.height * 0.15)
             
-            // Right line down
-            context.move(to: CGPoint(x: 345, y: 100))
-            context.addLine(to: CGPoint(x: 345, y: 100))
-            context.addLine(to: CGPoint(x: 345, y: 350))
+            context.setFillColor(#colorLiteral(red: 0.7953360677, green: 0, blue: 0, alpha: 1))
+            context.beginPath()
+            context.move(to: startFirstLine)
+            context.addLine(to: firstLineEnd)
+            context.addLine(to: secondLineEnd)
+            context.addLine(to: thirdLineEnd)
+            context.addLine(to: fourthLineEnd)
+            context.addLine(to: fifthLineEnd)
+            context.fillPath()
             
-            // Right diagonal line down
-            context.move(to: CGPoint(x: 346, y: 348))
-            context.addLine(to: CGPoint(x: 346, y: 348))
-            context.addLine(to: CGPoint(x: 200, y: 500))
-            
-            // Left diagonal line up
-            context.move(to: CGPoint(x: 200, y: 500))
-            context.addLine(to: CGPoint(x: 200, y: 500))
-            context.addLine(to: CGPoint(x: 50, y: 350))
-            
-            // Left line up
-            context.move(to: CGPoint(x: 50, y: 350))
-            context.addLine(to: CGPoint(x: 50, y: 350))
-            context.addLine(to: CGPoint(x: 50, y: 100))
-            
-            
-            context.setStrokeColor(UIColor.red.cgColor)
-            context.setLineWidth(10)
-            context.strokePath()
-            
-            // Inside line accross
-            context.move(to: CGPoint(x: 190, y: 200))
-            context.addLine(to: CGPoint(x: 190, y: 200))
-            context.addLine(to: CGPoint(x: 215, y: 200))
 
-            // Right diagonal line down
-            context.move(to: CGPoint(x: 215, y: 200))
-            context.addLine(to: CGPoint(x: 215, y: 200))
-            context.addLine(to: CGPoint(x: 300, y: 300))
+            let insideStartFirstLine = CGPoint(x: rect.size.width * 0.30, y: rect.size.height * 0.55)
+            let insideFirstEnd = CGPoint(x: rect.size.width * 0.46, y: rect.size.height * 0.28)
+            let insidSecondEnd = CGPoint(x: rect.size.width * 0.54, y: rect.size.height * 0.28)
+            let insideThirdEnd = CGPoint(x: rect.size.width * 0.70, y: rect.size.height * 0.55)
+            let insideFourthEnd = CGPoint(x: rect.size.width * 0.62, y: rect.size.height * 0.55)
+            let insideFifthEnd = CGPoint(x: rect.size.width * 0.50, y: rect.size.height * 0.36)
+            let insideSixthEnd = CGPoint(x: rect.size.width * 0.38, y: rect.size.height * 0.55)
+            let insideSeventhEnd = CGPoint(x: rect.size.width * 0.30, y: rect.size.height * 0.55)
 
-            // Right bottom line accross
-            context.move(to: CGPoint(x: 300, y: 300))
-            context.addLine(to: CGPoint(x: 300, y: 300))
-            context.addLine(to: CGPoint(x: 275, y: 300))
-
-            // Right diagonal line up
-            context.move(to: CGPoint(x: 275, y: 300))
-            context.addLine(to: CGPoint(x: 275, y: 300))
-            context.addLine(to: CGPoint(x: 230, y: 250))
-
-            // Left diagonal line down
-            context.move(to: CGPoint(x: 230, y: 250))
-            context.addLine(to: CGPoint(x: 230, y: 250))
-            context.addLine(to: CGPoint(x: 205, y: 250))
-
-//            // Left botto line accross
-//            context.move(to: CGPoint(x: 50, y: 350))
-//            context.addLine(to: CGPoint(x: 50, y: 350))
-//            context.addLine(to: CGPoint(x: 50, y: 100))
-//
-//            // Left diagonal line up
-//            context.move(to: CGPoint(x: 50, y: 350))
-//            context.addLine(to: CGPoint(x: 50, y: 350))
-//            context.addLine(to: CGPoint(x: 50, y: 100))
-      
-            context.setStrokeColor(UIColor.black.cgColor)
-            context.setLineWidth(10)
-            context.strokePath()
+            context.setFillColor(#colorLiteral(red: 0.9968661666, green: 0.9970325828, blue: 0.9968442321, alpha: 1))
+            context.beginPath()
+            context.move(to: insideStartFirstLine)
+            context.addLine(to: insideFirstEnd)
+            context.addLine(to: insidSecondEnd)
+            context.addLine(to: insideThirdEnd)
+            context.addLine(to: insideFourthEnd)
+            context.addLine(to: insideFifthEnd)
+            context.addLine(to: insideSixthEnd)
+            context.addLine(to: insideSeventhEnd)
+            context.fillPath()
             
         }
     }

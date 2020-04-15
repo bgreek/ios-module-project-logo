@@ -10,7 +10,24 @@ import UIKit
 
 class LogoViewController: UIViewController {
     
-    @IBOutlet weak var logoView: UIView!
+    var fade: Bool = false
+    
+    @IBOutlet weak var logoView: Logo!
+    @IBOutlet weak var fadeButton: UIButton!
+    @IBAction func fadeButtonTaped(_ sender: UIButton) {
+        fade.toggle()
+        if fadeButton.isEnabled {
+            if fade == true {
+                UIView.animate(withDuration: 4.0) {
+                    self.logoView.alpha = 0.0
+                }
+            } else {
+                if fade == false {
+                    self.logoView.alpha = 1.0
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
